@@ -1,1 +1,1 @@
-A Simple Movie Web Application using React and TMDB API
+A Simple Movie Web App using React and TMDB API
