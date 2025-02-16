@@ -1,6 +1,7 @@
 import React, { use } from 'react'
 import { useState, useEffect } from 'react'
 import MovieCard from '../components/MovieCard';
+import MovieCarousel from "../components/MovieCarousel";
 import '../css/Home.css'
 import { getAllMovies, searchMovies, getPopularMovies } from '../services/api';
 
@@ -64,6 +65,10 @@ const Home = () => {
 
     return (
         <div className="home">
+          <div>
+            <h1>Popular Movies</h1>
+            <MovieCarousel />
+          </div>
           <form onSubmit={handleSearch} className="search-form">
             <input
               type="text"
