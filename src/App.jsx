@@ -1,5 +1,5 @@
 import './css/App.css'
-import { Routes, Route} from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from "./Pages/Home"
 import Favorites from './Pages/Favorites'
 import NavaBar from './components/NavaBar'
@@ -10,10 +10,12 @@ function App() {
     <MovieProvider>
       <NavaBar />
     <main className='main-content'>
-      <Routes>
+    <Router>
+    <Switch>
         <Route path='/' element={<Home />} />
         <Route path='/favorites' element={<Favorites />} />
-      </Routes>
+    </Switch>
+    </Router>
     </main>
     </MovieProvider>
   )
